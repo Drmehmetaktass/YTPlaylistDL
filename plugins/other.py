@@ -22,12 +22,12 @@ import asyncio
 @Client.on_message(filters.command("start"))
 async def start_msg(client, message):
     await message.reply_text(
-        f"Hi {message.from_user.mention},If you need any help, Just click help button.\n\nProject by @Harp_Tech",
+        f"Merhaba {message.from_user.mention},Herhangi bir yardıma ihtiyacınız olursa, yardım düğmesini tıklamanız yeterlidir.\in\Project by @drmehmetaktass",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🛠 Help", callback_data=f"help"),
-                    InlineKeyboardButton("🧰 About", callback_data=f"about"),
+                    InlineKeyboardButton("🛠 YARDIM", callback_data=f"help"),
+                    InlineKeyboardButton("🧰 BİLGİ", callback_data=f"about"),
                 ]
             ]
         ),
@@ -41,12 +41,12 @@ async def cb_handler(client, update):
 
     if "help" in cb_data:
         await update.message.edit_text(
-            "Just Send URL with Format.(Audio/Video)\nExample: `https://youtube.com/playlist?list=xxxxxxxxxx audio`\n\nPowered by @Harp_Tech",
+            "URL'yi Biçimle Gönderin.(Audio/Video)\nÖrnek: `https://youtube.com/playlist?list=xxxxxxxxxx audio`\n\nPowered by @drmehmetaktass",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🧰 About", callback_data=f"about"),
-                        InlineKeyboardButton("🔙 Back", callback_data=f"back"),
+                        InlineKeyboardButton("🧰 BİLGİ", callback_data=f"about"),
+                        InlineKeyboardButton("🔙 GERİ", callback_data=f"back"),
                     ]
                 ]
             ),
@@ -57,8 +57,8 @@ async def cb_handler(client, update):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🛠 Help", callback_data=f"help"),
-                        InlineKeyboardButton("🔙 Back", callback_data=f"back"),
+                        InlineKeyboardButton("🛠 YARDIM", callback_data=f"help"),
+                        InlineKeyboardButton("🔙 GERİ", callback_data=f"back"),
                     ]
                 ]
             ),
@@ -69,8 +69,8 @@ async def cb_handler(client, update):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🛠 Help", callback_data=f"help"),
-                        InlineKeyboardButton("🧰 About", callback_data=f"about"),
+                        InlineKeyboardButton("🛠 YARDIM", callback_data=f"help"),
+                        InlineKeyboardButton("🧰 BİLGİ", callback_data=f"about"),
                     ]
                 ]
             ),
